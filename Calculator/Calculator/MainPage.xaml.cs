@@ -21,6 +21,106 @@ namespace Calculator
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
         }
+        //Button "C"
+        private void Button_Click_C(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "DEL"
+        private void Button_Click_Del(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "+-"
+        private void Button_Click_PlusMinus(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "%"
+        private void Button_Click_Percentage(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "/"
+        private void Button_Click_Divide(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "7"
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "8"
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "9"
+        private void Button_Click_9(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "*"
+        private void Button_Click_Multiply(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "4"
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "5"
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "6"
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "-"
+        private void Button_Click_Minus(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "1"
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "2"
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "3"
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "+"
+        private void Button_Click_Plus(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "0"
+        private void Button_Click_0(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "."
+        private void Button_Click_Dot(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //Button "="
+        private void Button_Click_Equal(object sender, RoutedEventArgs e)
+        {
+
+        }
 
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()
