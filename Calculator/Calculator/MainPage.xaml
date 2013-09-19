@@ -66,26 +66,26 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                 <!-- your numbers-->
-                <Button Background="SteelBlue" Grid.Row="0" Grid.Column="0">C</Button>
-                <Button Background="Gray" Grid.Row="1" Grid.Column="0">Del</Button>
-                <Button Background="Gray" Grid.Row="1" Grid.Column="1">+-</Button>
-                <Button Background="Gray" Grid.Row="1" Grid.Column="2">%</Button>
-                <Button Background="Gray" Grid.Row="1" Grid.Column="3">/</Button>
-                <Button Background="DarkBlue" Grid.Row="2" Grid.Column="0">7</Button>
-                <Button Background="DarkBlue" Grid.Row="2" Grid.Column="1">8</Button>
-                <Button Background="DarkBlue" Grid.Row="2" Grid.Column="2">9</Button>
-                <Button Background="Gray" Grid.Row="2" Grid.Column="3">X</Button>
-                <Button Background="DarkBlue" Grid.Row="3" Grid.Column="0">4</Button>
-                <Button Background="DarkBlue" Grid.Row="3" Grid.Column="1">5</Button>
-                <Button Background="DarkBlue" Grid.Row="3" Grid.Column="2">6</Button>
-                <Button Background="Gray" Grid.Row="3" Grid.Column="3">-</Button>
-                <Button Background="DarkBlue" Grid.Row="4" Grid.Column="0">1</Button>
-                <Button Background="DarkBlue" Grid.Row="4" Grid.Column="1">2</Button>
-                <Button Background="DarkBlue" Grid.Row="4" Grid.Column="2">3</Button>
-                <Button Background="Gray" Grid.Row="4" Grid.Column="3">+</Button>
-                <Button Background="DarkBlue" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">0</Button>
-                <Button Background="DarkBlue" Grid.Row="5" Grid.Column="2">.</Button>
-                <Button Background="Red" Grid.Row="5" Grid.Column="3">=</Button>
+                <Button Background="SteelBlue" Grid.Row="0" Grid.Column="0" Content="C"/>
+                <Button Background="Gray" Grid.Row="1" Grid.Column="0" Content="DEL"/>
+                <Button Background="Gray" Grid.Row="1" Grid.Column="1" Content="+-"/>
+                <Button Background="Gray" Grid.Row="1" Grid.Column="2" Content="%"/>
+                <Button Background="Gray" Grid.Row="1" Grid.Column="3" Content="/"/>
+                <Button Background="DarkBlue" Grid.Row="2" Grid.Column="0" Content="7"/>
+                <Button Background="DarkBlue" Grid.Row="2" Grid.Column="1" Content="8"/>
+                <Button Background="DarkBlue" Grid.Row="2" Grid.Column="2" Content="9"/>
+                <Button Background="Gray" Grid.Row="2" Grid.Column="3" Content="X"/>
+                <Button Background="DarkBlue" Grid.Row="3" Grid.Column="0" Content="4"/>
+                <Button Background="DarkBlue" Grid.Row="3" Grid.Column="1" Content="5"/>
+                <Button Background="DarkBlue" Grid.Row="3" Grid.Column="2" Content="6"/>
+                <Button Background="Gray" Grid.Row="3" Grid.Column="3" Content="-"/>
+                <Button Background="DarkBlue" Grid.Row="4" Grid.Column="0" Content="1"/>
+                <Button Background="DarkBlue" Grid.Row="4" Grid.Column="1" Content="2"/>
+                <Button Background="DarkBlue" Grid.Row="4" Grid.Column="2" Content="3"/>
+                <Button Background="Gray" Grid.Row="4" Grid.Column="3" Content="+"/>
+                <Button Background="DarkBlue" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="0"/>
+                <Button Background="DarkBlue" Grid.Row="5" Grid.Column="2" Content="."/>
+                <Button Background="Red" Grid.Row="5" Grid.Column="3" Content="="/>
  
 
 
