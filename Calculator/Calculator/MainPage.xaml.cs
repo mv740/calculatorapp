@@ -23,7 +23,7 @@ namespace Calculator
         }
 
         string operation;
-        int num1, num2, result;
+        double num1, num2, result;
 
 
         //Button "0"
@@ -76,43 +76,89 @@ namespace Calculator
         {
             TextBox.Text = TextBox.Text + "9";
         }
+
+        //operation
+        private void Clear()
+        {
+            TextBox.Text = string.Empty;
+        }
+
         //Button "*"
         private void Button_Click_Multiply(object sender, RoutedEventArgs e)
         {
-            
+            if (TextBox.Text.Length > 0)
+            {
+                num1 = double.Parse(TextBox.Text);
+                operation = "*";
+                Clear();
+            }
+        }
+        //Button "/"
+        private void Button_Click_Divide(object sender, RoutedEventArgs e)
+        {
+            if (TextBox.Text.Length > 0)
+            {
+                num1 = double.Parse(TextBox.Text);
+                operation = "/";
+                Clear();
+            }
         }
         //Button "-"
         private void Button_Click_Minus(object sender, RoutedEventArgs e)
         {
-
+            if (TextBox.Text.Length > 0)
+            {
+                num1 = double.Parse(TextBox.Text);
+                operation = "-";
+                Clear();
+            }
         }
         //Button "+"
         private void Button_Click_Plus(object sender, RoutedEventArgs e)
         {
-
+            if (TextBox.Text.Length > 0)
+            {
+                num1 = double.Parse(TextBox.Text);
+                operation = "+";
+                Clear();
+            }
         }
         //Button "."
         private void Button_Click_Dot(object sender, RoutedEventArgs e)
         {
-
+            TextBox.Text = TextBox.Text + ".";
         }
         //Button "="
         private void Button_Click_Equal(object sender, RoutedEventArgs e)
         {
-
+            num2 = double.Parse(TextBox.Text);
+            switch (operation)
+            {
+                case "+": result = num1 + num2;
+                    break;
+                case "-": result = num1 - num2;
+                    break;
+                case "/": result = num1 / num2;
+                    break;
+                case "*": result = num1 * num2;
+                    break;
+            }
+            Clear();
+            TextBox.Text = TextBox.Text + result;
         }
         //Button "C"
         private void Button_Click_C(object sender, RoutedEventArgs e)
         {
-           
+           Clear();
+           num1 = double.Parse(string.Empty);
+           num2 = double.Parse(string.Empty);
         }
         //Button "DEL"
         private void Button_Click_Del(object sender, RoutedEventArgs e)
         {
-            int lenght = TextBox.Text.Length;
-            if (lenght > 0)
+            if (TextBox.Text.Length > 0)
             {
-                TextBox.Text.Remove(lenght - 1);
+                TextBox.Text = TextBox.Text.Remove(TextBox.Text.Length - 1);
             }
             else
             {
@@ -122,18 +168,18 @@ namespace Calculator
         //Button "+-"
         private void Button_Click_PlusMinus(object sender, RoutedEventArgs e)
         {
-
+            double number = double.Parse(TextBox.Text);
+            number = -1 * number;
+            Clear();
+            TextBox.Text = TextBox.Text+number;
+            
         }
         //Button "%"
         private void Button_Click_Percentage(object sender, RoutedEventArgs e)
         {
 
         }
-        //Button "/"
-        private void Button_Click_Divide(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
 
         // Sample code for building a localized ApplicationBar
         //private void BuildLocalizedApplicationBar()
