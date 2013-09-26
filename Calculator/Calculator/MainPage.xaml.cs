@@ -23,7 +23,7 @@ namespace Calculator
         }
 
         string operation;
-        double num1, num2, result;
+        double? num1, num2, result;
 
 
         //Button "0"
@@ -131,27 +131,30 @@ namespace Calculator
         //Button "="
         private void Button_Click_Equal(object sender, RoutedEventArgs e)
         {
-            num2 = double.Parse(TextBox.Text);
-            switch (operation)
+            if (TextBox.Text.Length > 0)
             {
-                case "+": result = num1 + num2;
-                    break;
-                case "-": result = num1 - num2;
-                    break;
-                case "/": result = num1 / num2;
-                    break;
-                case "*": result = num1 * num2;
-                    break;
+                num2 = double.Parse(TextBox.Text);
+                switch (operation)
+                {
+                    case "+": result = num1 + num2;
+                        break;
+                    case "-": result = num1 - num2;
+                        break;
+                    case "/": result = num1 / num2;
+                        break;
+                    case "*": result = num1 * num2;
+                        break;
+                }
+                Clear();
+                TextBox.Text = TextBox.Text + result;
             }
-            Clear();
-            TextBox.Text = TextBox.Text + result;
         }
         //Button "C"
         private void Button_Click_C(object sender, RoutedEventArgs e)
         {
            Clear();
-           num1 = double.Parse(string.Empty);
-           num2 = double.Parse(string.Empty);
+           num1 = null;
+           num2 = null;
         }
         //Button "DEL"
         private void Button_Click_Del(object sender, RoutedEventArgs e)
@@ -168,11 +171,13 @@ namespace Calculator
         //Button "+-"
         private void Button_Click_PlusMinus(object sender, RoutedEventArgs e)
         {
-            double number = double.Parse(TextBox.Text);
-            number = -1 * number;
-            Clear();
-            TextBox.Text = TextBox.Text+number;
-            
+            if (TextBox.Text.Length > 0)
+            {
+                double number = double.Parse(TextBox.Text);
+                number = -1 * number;
+                Clear();
+                TextBox.Text = TextBox.Text + number;
+            }
         }
         //Button "%"
         private void Button_Click_Percentage(object sender, RoutedEventArgs e)
