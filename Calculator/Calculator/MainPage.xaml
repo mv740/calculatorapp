@@ -10,9 +10,14 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    SupportedOrientations="Portrait" Orientation="Portrait"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
-
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate>
+            
+               
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
@@ -39,54 +44,64 @@
             CurrentUICulture of the app at run time.
          -->
 
-        <!--TitlePanel contains the name of the application and page title-->
+        <!--TitlePanel contains the name of the application and page title
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock Text="calculator" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
         </StackPanel>
-
+        -->
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Grid Margin="20,20,20,600">
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,0,0">
+            <Grid Margin="10,0,10,670">
                 <!-- here is your screen ANSWERS-->
-                <TextBox  TextAlignment="Right" FontWeight="Bold" Background="White" FontSize="40" x:Name="TextBox" Height="100" Width="415"/>
+                <Viewbox Stretch="Uniform" Width="auto" HorizontalAlignment="Right">
+                <TextBox TextAlignment="Right" 
+                         x:Name="TextBox"
+                         FontWeight="Bold" 
+                         Background="Black"  
+                         FontSize="60"  
+                         Height="100" 
+                         Foreground="White"
+                         BorderThickness="0" 
+                         />
+                </Viewbox>
             </Grid>
             <!-- row/collums definition-->
-            <Grid Grid.Column="1"  Margin="20,113,20,30">
+            <Grid Margin="0,100,0,0" >
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
+                    <RowDefinition Height="110" />
+                    <RowDefinition Height="110" />
+                    <RowDefinition Height="110" />
+                    <RowDefinition Height="110" />
+                    <RowDefinition Height="110"/>
+                    <RowDefinition Height="110" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="120"  />
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="120" />
+                    <ColumnDefinition Width="120" />
                 </Grid.ColumnDefinitions>
                 <!-- All the button : numbers or functions-->
-                <Button Background="SteelBlue" Grid.Row="0" Grid.Column="0" Content="C" Click="Button_Click_C"/>
-                <Button Background="Gray" Grid.Row="1" Grid.Column="0" Content="DEL" Click="Button_Click_Del"/>
-                <Button Background="Gray" Grid.Row="1" Grid.Column="1" Content="+-" Click="Button_Click_PlusMinus"/>
-                <Button Background="Gray" Grid.Row="1" Grid.Column="2" Content="%" Click="Button_Click_Percentage"/>
-                <Button Background="Gray" Grid.Row="1" Grid.Column="3" Content="/" Click="Button_Click_Divide"/>
-                <Button Background="DarkBlue" Grid.Row="2" Grid.Column="0" Content="7" Click="Button_Click_7"/>
-                <Button Background="DarkBlue" Grid.Row="2" Grid.Column="1" Content="8" Click="Button_Click_8"/>
-                <Button Background="DarkBlue" Grid.Row="2" Grid.Column="2" Content="9" Click="Button_Click_9"/>
-                <Button Background="Gray" Grid.Row="2" Grid.Column="3" Content="X" Click="Button_Click_Multiply"/>
-                <Button Background="DarkBlue" Grid.Row="3" Grid.Column="0" Content="4" Click="Button_Click_4"/>
-                <Button Background="DarkBlue" Grid.Row="3" Grid.Column="1" Content="5" Click="Button_Click_5"/>
-                <Button Background="DarkBlue" Grid.Row="3" Grid.Column="2" Content="6" Click="Button_Click_6"/>
-                <Button Background="Gray" Grid.Row="3" Grid.Column="3" Content="-" Click="Button_Click_Minus"/>
-                <Button Background="DarkBlue" Grid.Row="4" Grid.Column="0" Content="1" Click="Button_Click_1" />
-                <Button Background="DarkBlue" Grid.Row="4" Grid.Column="1" Content="2" Click="Button_Click_2"/>
-                <Button Background="DarkBlue" Grid.Row="4" Grid.Column="2" Content="3" Click="Button_Click_3"/>
-                <Button Background="Gray" Grid.Row="4" Grid.Column="3" Content="+" Click="Button_Click_Plus"/>
-                <Button Background="DarkBlue" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="0" Click="Button_Click_0"/>
-                <Button Background="DarkBlue" Grid.Row="5" Grid.Column="2" Content="." Click="Button_Click_Dot"/>
-                <Button Background="Red" Grid.Row="5" Grid.Column="3" Content="=" Click="Button_Click_Equal"/>
+                <Button Background="SteelBlue" BorderThickness="0" Grid.Row="0" Grid.Column="0" Content="C" Click="Button_Click_C"/>
+                <Button Background="Gray" BorderThickness="0" Grid.Row="1" Grid.Column="0" Content="DEL" Click="Button_Click_Del"/>
+                <Button Background="Gray" BorderThickness="0" Grid.Row="1" Grid.Column="1" Content="+-" Click="Button_Click_PlusMinus"/>
+                <Button Background="Gray" BorderThickness="0" Grid.Row="1" Grid.Column="2" Content="%" Click="Button_Click_Percentage"/>
+                <Button Background="Gray" BorderThickness="0" Grid.Row="1" Grid.Column="3" Content="/" Click="Button_Click_Divide"/>
+                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="2" Grid.Column="0" Content="7" Click="Button_Click_7"/>
+                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="2" Grid.Column="1" Content="8" Click="Button_Click_8"/>
+                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="2" Grid.Column="2" Content="9" Click="Button_Click_9"/>
+                <Button Background="Gray" BorderThickness="0" Grid.Row="2" Grid.Column="3" Content="X" Click="Button_Click_Multiply"/>
+                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="3" Grid.Column="0" Content="4" Click="Button_Click_4"/>
+                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="3" Grid.Column="1" Content="5" Click="Button_Click_5"/>
+                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="3" Grid.Column="2" Content="6" Click="Button_Click_6"/>
+                <Button Background="Gray" BorderThickness="0" Grid.Row="3" Grid.Column="3" Content="-" Click="Button_Click_Minus"/>
+                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="4" Grid.Column="0" Content="1" Click="Button_Click_1" />
+                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="4" Grid.Column="1" Content="2" Click="Button_Click_2"/>
+                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="4" Grid.Column="2" Content="3" Click="Button_Click_3"/>
+                <Button Background="Gray" BorderThickness="0" Grid.Row="4" Grid.Column="3" Content="+" Click="Button_Click_Plus"/>
+                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="0" Click="Button_Click_0"/>
+                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="5" Grid.Column="2" Content="." Click="Button_Click_Dot"/>
+                <Button Background="Red" BorderThickness="0" Grid.Row="5" Grid.Column="3" Content="=" Click="Button_Click_Equal"/>
             </Grid>
         </Grid>
 

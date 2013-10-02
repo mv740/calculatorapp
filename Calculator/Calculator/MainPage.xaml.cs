@@ -17,6 +17,9 @@ namespace Calculator
         public MainPage()
         {
             InitializeComponent();
+            TextBox.Text = "0";
+           
+
 
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
@@ -24,6 +27,23 @@ namespace Calculator
 
         string operation;
         double? num1, num2, result;
+
+        /*
+        //phone orientation
+        private void PhoneApplicationPage_OrientationChanged(object sender, OrientationChangedEventArgs e)
+        {
+            if (e.Orientation == PageOrientation.PortraitDown || e.Orientation == PageOrientation.PortraitUp)
+            {
+                
+            }
+            else
+            {
+               
+            }
+        }
+        */
+
+
 
 
         //Button "0"
@@ -80,7 +100,8 @@ namespace Calculator
         //operation
         private void Clear()
         {
-            TextBox.Text = string.Empty;
+            TextBox.Text = "0";
+            //TextBox.Text = string.Empty;
         }
 
         //Button "*"
@@ -126,7 +147,23 @@ namespace Calculator
         //Button "."
         private void Button_Click_Dot(object sender, RoutedEventArgs e)
         {
-            TextBox.Text = TextBox.Text + ".";
+            char[] textBoxCharacter = TextBox.Text.ToCharArray();
+            bool TextBoxHasDot = false;
+            //check if there is already a "." inside TextBox
+            // if yes : button add a "." , if no, then it dones't do anything. 
+            for (int i = 0; i < textBoxCharacter.Length; i++)
+            {
+                if (char.IsPunctuation(textBoxCharacter[i]))
+                {
+                    TextBoxHasDot = true;
+                }
+            }
+            if (!TextBoxHasDot)
+            {
+                TextBox.Text = TextBox.Text + ".";
+            }
+               
+          
         }
         //Button "="
         private void Button_Click_Equal(object sender, RoutedEventArgs e)
