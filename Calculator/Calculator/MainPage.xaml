@@ -10,20 +10,12 @@
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
-    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
-    <phone:PhoneApplicationPage.Resources>
-        <DataTemplate>
-            
-               
-        </DataTemplate>
-    </phone:PhoneApplicationPage.Resources>
+    
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+        
 
         <!-- LOCALIZATION NOTE:
             To localize the displayed strings copy their values to appropriately named
@@ -50,59 +42,32 @@
         </StackPanel>
         -->
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,0,0">
-            <Grid Margin="10,0,10,670">
-                <!-- here is your screen ANSWERS-->
-                <Viewbox Stretch="Uniform" Width="auto" HorizontalAlignment="Right">
-                <TextBox TextAlignment="Right" 
-                         x:Name="TextBox"
-                         FontWeight="Bold" 
-                         Background="Black"  
-                         FontSize="60"  
-                         Height="100" 
-                         Foreground="White"
-                         BorderThickness="0" 
-                         />
-                </Viewbox>
+        <Grid x:Name="ContentPanel" Margin="0,0,0,0">
+            <Grid Margin="0,0,0,0">
+                <TextBlock Text="Calculator"  FontSize="30" Style="{StaticResource PhoneTextNormalStyle}"/>
             </Grid>
-            <!-- row/collums definition-->
-            <Grid Margin="0,100,0,0" >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="110" />
-                    <RowDefinition Height="110" />
-                    <RowDefinition Height="110" />
-                    <RowDefinition Height="110" />
-                    <RowDefinition Height="110"/>
-                    <RowDefinition Height="110" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="120"  />
-                    <ColumnDefinition Width="120" />
-                    <ColumnDefinition Width="120" />
-                    <ColumnDefinition Width="120" />
-                </Grid.ColumnDefinitions>
-                <!-- All the button : numbers or functions-->
-                <Button Background="SteelBlue" BorderThickness="0" Grid.Row="0" Grid.Column="0" Content="C" Click="Button_Click_C"/>
-                <Button Background="Gray" BorderThickness="0" Grid.Row="1" Grid.Column="0" Content="DEL" Click="Button_Click_Del"/>
-                <Button Background="Gray" BorderThickness="0" Grid.Row="1" Grid.Column="1" Content="+-" Click="Button_Click_PlusMinus"/>
-                <Button Background="Gray" BorderThickness="0" Grid.Row="1" Grid.Column="2" Content="%" Click="Button_Click_Percentage"/>
-                <Button Background="Gray" BorderThickness="0" Grid.Row="1" Grid.Column="3" Content="/" Click="Button_Click_Divide"/>
-                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="2" Grid.Column="0" Content="7" Click="Button_Click_7"/>
-                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="2" Grid.Column="1" Content="8" Click="Button_Click_8"/>
-                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="2" Grid.Column="2" Content="9" Click="Button_Click_9"/>
-                <Button Background="Gray" BorderThickness="0" Grid.Row="2" Grid.Column="3" Content="X" Click="Button_Click_Multiply"/>
-                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="3" Grid.Column="0" Content="4" Click="Button_Click_4"/>
-                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="3" Grid.Column="1" Content="5" Click="Button_Click_5"/>
-                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="3" Grid.Column="2" Content="6" Click="Button_Click_6"/>
-                <Button Background="Gray" BorderThickness="0" Grid.Row="3" Grid.Column="3" Content="-" Click="Button_Click_Minus"/>
-                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="4" Grid.Column="0" Content="1" Click="Button_Click_1" />
-                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="4" Grid.Column="1" Content="2" Click="Button_Click_2"/>
-                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="4" Grid.Column="2" Content="3" Click="Button_Click_3"/>
-                <Button Background="Gray" BorderThickness="0" Grid.Row="4" Grid.Column="3" Content="+" Click="Button_Click_Plus"/>
-                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="0" Click="Button_Click_0"/>
-                <Button Background="DarkBlue" BorderThickness="0" Grid.Row="5" Grid.Column="2" Content="." Click="Button_Click_Dot"/>
-                <Button Background="Red" BorderThickness="0" Grid.Row="5" Grid.Column="3" Content="=" Click="Button_Click_Equal"/>
+            <Grid Margin="0,100,0,0">
+                <!--<TextBlock Text="Type" Style="{StaticResource PhoneTextNormalStyle}"/>
+                 -->
+                <Grid Margin="0,20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Button Content="normal" Height="100" Width="200" Grid.Row="0" Click="Button_Click_Normal"/>
+                    <RichTextBox  VerticalAlignment="Top" IsReadOnly="True" Foreground="White" Grid.Row="0" Background="Transparent">
+                        <Paragraph>mathematic</Paragraph>
+                    </RichTextBox>
+                    <RichTextBox VerticalAlignment="Top" IsReadOnly="True" Foreground="White" Grid.Row="1" Background="Transparent">
+                        <Paragraph>Computer Science</Paragraph>
+                    </RichTextBox>
+
+                    <Button Content="binary/hex" Height="100" Width="200" Grid.Row="1" Click="Button_Click_Binary"/>
+                </Grid>
             </Grid>
+            
+            
         </Grid>
 
         <!--Uncomment to see an alignment grid to help ensure your controls are
