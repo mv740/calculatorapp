@@ -29,16 +29,26 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,0,0">
             <Grid x:Name="Screen" Margin="0,0,0,0">
                 <TextBlock></TextBlock>
-                <!-- here is your screen ANSWERS-->
+                <!-- here is your screen DECIMAL ANSWERS-->
                 <Viewbox Stretch="Uniform" Width="450" Margin="0,0,0,600" HorizontalAlignment="Center">
                     <TextBlock 
                         Name="TextBox"
                         TextAlignment="Right"
-                        Text="00"
+                        Text="0"
                         Width="120"
                         />     
                 </Viewbox>
                 
+            </Grid>
+            <Grid Margin="0,100,0,500">
+                <Viewbox Stretch="Uniform" Width="450" Margin="0,0,0,0" HorizontalAlignment="Center">
+                    <TextBlock 
+                        x:Name="TextBoxHex"
+                        TextAlignment="Right"
+                        Text="0"
+                        Width="120"
+                        />
+                </Viewbox>
             </Grid>
             <Grid Margin="0,175,0,0">
                 <Grid.RowDefinitions>
@@ -53,19 +63,82 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Grid Grid.Row="0" Grid.Column="0">
+                
+                <!--binary button B1 to button B8-->
+                <Grid Grid.Row="2" Grid.Column="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="ButtonB1" Grid.Column="0"  Grid.Row="2" BorderThickness="0" Content="0" Click="Button_Click_B1"/>
+                    <Button x:Name="ButtonB2" Grid.Column="1"  Grid.Row="2" BorderThickness="0" Content="0" Click="Button_Click_B2"/>
+                    <TextBox Text="7" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="15" Foreground="White"  Grid.Column="0" Background="Transparent" BorderThickness="0"/>
+                </Grid>
+
+                <Grid Grid.Row="2" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox Text="0" TextAlignment="Center" VerticalAlignment="Center" Width="45"  Grid.Column="0"  />
-                    
+                    <Button x:Name="ButtonB3" Grid.Column="0"  BorderThickness="0" Content="0" Click="Button_Click_B3"/>
+                    <Button x:Name="ButtonB4" Grid.Column="1"  BorderThickness="0" Content="0" Click="Button_Click_B4"/>
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="ButtonB5" Grid.Column="0"   BorderThickness="0" Content="0" Click="Button_Click_B5"/>
+                    <Button x:Name="ButtonB6" Grid.Column="1"   BorderThickness="0" Content="0" Click="Button_Click_B6"/>
+                    </Grid>
+                
+                <Grid Grid.Row="2" Grid.Column="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="ButtonB7" Grid.Column="0"  Grid.Row="2" BorderThickness="0" Content="0" Click="Button_Click_B7"/>
+                    <Button x:Name="ButtonB8" Grid.Column="1"  Grid.Row="2" BorderThickness="0" Content="0" Click="Button_Click_B8"/>
+                    <TextBox Text="0" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="15" Foreground="White"  Grid.Column="1" Background="Transparent" BorderThickness="0"/>
+                </Grid>
+                <!--binary button A1 to button A8-->
+                <Grid Grid.Row="3" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="ButtonA1" Grid.Column="0"  Grid.Row="3" BorderThickness="0" Content="0" Click="Button_Click_A1"/>
+                    <Button x:Name="ButtonA2" Grid.Column="1"  Grid.Row="3" BorderThickness="0" Content="0" Click="Button_Click_A2"/>
+                    <TextBox Text="7" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="15" Foreground="White"  Grid.Column="0" Background="Transparent" BorderThickness="0"/>
                 </Grid>
 
-                <Button x:Name="Button00" Grid.Column="0"  Grid.Row="3" BorderThickness="0" Content="0" Click="Button_Click_00"/>
-                <Button x:Name="Button01" Grid.Column="1"  Grid.Row="3" BorderThickness="0" Content="0" Click="Button_Click_01"/>
+                <Grid Grid.Row="3" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="ButtonA3" Grid.Column="0"  Grid.Row="3" BorderThickness="0" Content="0" Click="Button_Click_A3"/>
+                    <Button x:Name="ButtonA4" Grid.Column="1"  Grid.Row="3" BorderThickness="0" Content="0" Click="Button_Click_A4"/>
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="ButtonA5" Grid.Column="0"  Grid.Row="3" BorderThickness="0" Content="0" Click="Button_Click_A5"/>
+                    <Button x:Name="ButtonA6" Grid.Column="1"  Grid.Row="3" BorderThickness="0" Content="0" Click="Button_Click_A6"/>
+                    </Grid>
+                
+                <Grid Grid.Row="3" Grid.Column="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="ButtonA7" Grid.Column="0"  Grid.Row="3" BorderThickness="0" Content="0" Click="Button_Click_A7"/>
+                    <Button x:Name="ButtonA8" Grid.Column="1"  Grid.Row="3" BorderThickness="0" Content="0" Click="Button_Click_A8"/>
+                    <TextBox Text="0" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="15" Foreground="White"  Grid.Column="1" Background="Transparent" BorderThickness="0"/>
+                </Grid>
+
                 
             </Grid>
         </Grid>
