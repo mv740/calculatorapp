@@ -1,4 +1,30 @@
-calculatorapp
-=============
-This is a simple app that will do some mathematic functions. 
-It purpose is so that i could learn how to program using the windows phone 8.0 sdk 
+
+Calculator
+=============================
+
+
+
+  I have created this app to learn how to use the window phone 8 sdk. 
+  This app has a main page which permit the use to chose which type of calculator he want to use. 
+  
+    1- Standard: + - / *
+    
+    2- binary conversion to hex and decimal
+     
+
+
+Main Page
+--------
+<img src="https://raw.github.com/mv740/calculatorapp/master/picture2.png" />
+
+
+
+Standard Page
+-----------
+<img src="https://raw.github.com/mv740/calculatorapp/master/picture3.png" />
+
+Binary converter Page
+--------------------
+<img src="https://raw.github.com/mv740/calculatorapp/master/picture1.png" />
+
+
