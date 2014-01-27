@@ -11,7 +11,7 @@
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" Margin="-1,0,1,0">
  
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -46,9 +46,23 @@
         -->
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,0,0">
-            <Grid Margin="10,0,10,670">
-                <!-- here is your screen ANSWERS-->
+            <Grid Margin="10,0,10,690">
+                <!-- here is the screen showing all your expression-->
                 <Viewbox Stretch="Uniform" Width="auto" HorizontalAlignment="Right">
+                    <TextBox TextAlignment="Right" 
+                         x:Name="TextBoxExpression"
+                         FontWeight="Bold" 
+                         Background="Black"  
+                         FontSize="30"  
+                         Height="80" 
+                         Foreground="White"
+                         BorderThickness="0" 
+                         />
+                </Viewbox>
+            </Grid>
+            <Grid Margin="10,80,10,600">
+            <!-- here is your screen ANSWERS-->
+                <Viewbox Stretch="Uniform" Width="auto" HorizontalAlignment="Right" Margin="0,0,0,0">
                     <TextBox TextAlignment="Right" 
                          x:Name="TextBox"
                          FontWeight="Bold" 
@@ -61,14 +75,14 @@
                 </Viewbox>
             </Grid>
             <!-- row/collums definition-->
-            <Grid Margin="0,100,0,0" >
+            <Grid Margin="0,170,0,0" >
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="110" />
-                    <RowDefinition Height="110" />
-                    <RowDefinition Height="110" />
-                    <RowDefinition Height="110" />
-                    <RowDefinition Height="110"/>
-                    <RowDefinition Height="110" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="120"  />

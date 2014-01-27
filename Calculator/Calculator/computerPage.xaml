@@ -72,7 +72,7 @@
                     </Grid.ColumnDefinitions>
                     <Button x:Name="ButtonB1" Grid.Column="0"  Grid.Row="2" BorderThickness="0" Content="0" Click="Button_Click_B1"/>
                     <Button x:Name="ButtonB2" Grid.Column="1"  Grid.Row="2" BorderThickness="0" Content="0" Click="Button_Click_B2"/>
-                    <TextBox Text="7" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="15" Foreground="White"  Grid.Column="0" Background="Transparent" BorderThickness="0"/>
+                    <TextBox Text="15" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="15"   Grid.Column="0" Background="Transparent" BorderThickness="0" Foreground="White" IsEnabled="False"/>
                 </Grid>
 
                 <Grid Grid.Row="2" Grid.Column="1">
@@ -99,7 +99,7 @@
                     </Grid.ColumnDefinitions>
                     <Button x:Name="ButtonB7" Grid.Column="0"  Grid.Row="2" BorderThickness="0" Content="0" Click="Button_Click_B7"/>
                     <Button x:Name="ButtonB8" Grid.Column="1"  Grid.Row="2" BorderThickness="0" Content="0" Click="Button_Click_B8"/>
-                    <TextBox Text="0" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="15" Foreground="White"  Grid.Column="1" Background="Transparent" BorderThickness="0"/>
+                    <TextBox Text="8" IsEnabled="False"  TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="15" Foreground="White"  Grid.Column="1" Background="Transparent" BorderThickness="0"/>
                 </Grid>
                 <!--binary button A1 to button A8-->
                 <Grid Grid.Row="3" Grid.Column="0">
@@ -109,7 +109,7 @@
                     </Grid.ColumnDefinitions>
                     <Button x:Name="ButtonA1" Grid.Column="0"  Grid.Row="3" BorderThickness="0" Content="0" Click="Button_Click_A1"/>
                     <Button x:Name="ButtonA2" Grid.Column="1"  Grid.Row="3" BorderThickness="0" Content="0" Click="Button_Click_A2"/>
-                    <TextBox Text="7" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="15" Foreground="White"  Grid.Column="0" Background="Transparent" BorderThickness="0"/>
+                    <TextBox Text="7" IsEnabled="False" TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="15" Foreground="White"  Grid.Column="0" Background="Transparent" BorderThickness="0"/>
                 </Grid>
 
                 <Grid Grid.Row="3" Grid.Column="1">
@@ -136,7 +136,7 @@
                     </Grid.ColumnDefinitions>
                     <Button x:Name="ButtonA7" Grid.Column="0"  Grid.Row="3" BorderThickness="0" Content="0" Click="Button_Click_A7"/>
                     <Button x:Name="ButtonA8" Grid.Column="1"  Grid.Row="3" BorderThickness="0" Content="0" Click="Button_Click_A8"/>
-                    <TextBox Text="0" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="15" Foreground="White"  Grid.Column="1" Background="Transparent" BorderThickness="0"/>
+                    <TextBox Text="0" IsEnabled="False" TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="15" Foreground="White"  Grid.Column="1" Background="Transparent" BorderThickness="0"/>
                 </Grid>
 
                 

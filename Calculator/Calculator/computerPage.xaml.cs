@@ -18,6 +18,8 @@ namespace Calculator
         }
 
         string buttonA1Value = "0", buttonA2Value = "0", buttonA3Value = "0", buttonA4Value = "0", buttonA5Value = "0", buttonA6Value = "0", buttonA7Value = "0", buttonA8Value = "0";
+        string buttonB1Value = "0", buttonB2Value = "0", buttonB3Value = "0", buttonB4Value = "0", buttonB5Value = "0", buttonB6Value = "0", buttonB7Value = "0", buttonB8Value = "0";
+        
         string binaryNumber;
         Int64 decimalNumber;
         string hexNumber;
@@ -27,7 +29,8 @@ namespace Calculator
          */
         public void ConvertDecimal()
         {
-            binaryNumber = buttonA1Value + buttonA2Value + buttonA3Value + buttonA4Value + buttonA5Value + buttonA6Value + buttonA7Value + buttonA8Value;
+            binaryNumber = buttonB1Value + buttonB2Value + buttonB3Value + buttonB4Value + buttonB5Value + buttonB6Value + buttonB7Value + buttonB8Value +
+                            buttonA1Value + buttonA2Value + buttonA3Value + buttonA4Value + buttonA5Value + buttonA6Value + buttonA7Value + buttonA8Value;
             decimalNumber = Convert.ToInt64(binaryNumber,2);
             binaryNumber = null;
             binaryNumber = binaryNumber+decimalNumber;
@@ -36,9 +39,115 @@ namespace Calculator
 
         public void ConvertHex()
         {
-            binaryNumber = buttonA1Value + buttonA2Value + buttonA3Value + buttonA4Value + buttonA5Value + buttonA6Value + buttonA7Value + buttonA8Value;
+            binaryNumber = buttonB1Value + buttonB2Value + buttonB3Value + buttonB4Value + buttonB5Value + buttonB6Value + buttonB7Value + buttonB8Value+
+                            buttonA1Value + buttonA2Value + buttonA3Value + buttonA4Value + buttonA5Value + buttonA6Value + buttonA7Value + buttonA8Value;
             hexNumber = Convert.ToInt32(binaryNumber, 2).ToString("X");
             TextBoxHex.Text = hexNumber ;
+        }
+
+        private void Button_Click_B1(object sender, RoutedEventArgs e)
+        {
+            switch (ButtonB1.Content.ToString())
+            {
+                case "0": ButtonB1.Content = "1";
+                    break;
+                case "1": ButtonB1.Content = "0";
+                    break;
+            }
+            buttonB1Value = ButtonB1.Content.ToString();
+            ConvertHex();
+            ConvertDecimal();
+        }
+        private void Button_Click_B2(object sender, RoutedEventArgs e)
+        {
+            switch (ButtonB2.Content.ToString())
+            {
+                case "0": ButtonB2.Content = "1";
+                    break;
+                case "1": ButtonB2.Content = "0";
+                    break;
+            }
+            buttonB2Value = ButtonB2.Content.ToString();
+            ConvertHex();
+            ConvertDecimal();
+        }
+        private void Button_Click_B3(object sender, RoutedEventArgs e)
+        {
+            switch (ButtonB3.Content.ToString())
+            {
+                case "0": ButtonB3.Content = "1";
+                    break;
+                case "1": ButtonB3.Content = "0";
+                    break;
+            }
+            buttonB3Value = ButtonB3.Content.ToString();
+            ConvertHex();
+            ConvertDecimal();
+        }
+        private void Button_Click_B4(object sender, RoutedEventArgs e)
+        {
+            switch (ButtonB4.Content.ToString())
+            {
+                case "0": ButtonB4.Content = "1";
+                    break;
+                case "1": ButtonB4.Content = "0";
+                    break;
+            }
+            buttonB4Value = ButtonB4.Content.ToString();
+            ConvertHex();
+            ConvertDecimal();
+        }
+        private void Button_Click_B5(object sender, RoutedEventArgs e)
+        {
+            switch (ButtonB5.Content.ToString())
+            {
+                case "0": ButtonB5.Content = "1";
+                    break;
+                case "1": ButtonB5.Content = "0";
+                    break;
+            }
+            buttonB5Value = ButtonB5.Content.ToString();
+            ConvertHex();
+            ConvertDecimal();
+        }
+        private void Button_Click_B6(object sender, RoutedEventArgs e)
+        {
+            switch (ButtonB6.Content.ToString())
+            {
+                case "0": ButtonB6.Content = "1";
+                    break;
+                case "1": ButtonB6.Content = "0";
+                    break;
+            }
+            buttonB6Value = ButtonB6.Content.ToString();
+            ConvertHex();
+            ConvertDecimal();
+        }
+        private void Button_Click_B7(object sender, RoutedEventArgs e)
+        {
+            switch (ButtonB7.Content.ToString())
+            {
+                case "0": ButtonB7.Content = "1";
+                    break;
+                case "1": ButtonB7.Content = "0";
+                    break;
+            }
+            buttonB7Value = ButtonB7.Content.ToString();
+            ConvertHex();
+            ConvertDecimal();
+        }
+        private void Button_Click_B8(object sender, RoutedEventArgs e)
+        {
+            switch (ButtonB8.Content.ToString())
+            {
+                case "0": ButtonB8.Content = "1";
+                    break;
+                case "1": ButtonB8.Content = "0";
+                    break;
+            }
+            buttonB8Value = ButtonB8.Content.ToString();
+            ConvertHex();
+            ConvertDecimal();
         }
 
         private void Button_Click_A1(object sender, RoutedEventArgs e)

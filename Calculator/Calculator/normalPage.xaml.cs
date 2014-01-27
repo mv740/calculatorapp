@@ -1,4 +1,5 @@
 ﻿using System;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -17,16 +18,19 @@ namespace Calculator
         public normalPage()
         {
             InitializeComponent();
-            TextBox.Text = "0";
-
+           // TextBox.Text = "0";
+            
 
 
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
         }
+        
+
 
         string operation;
         double? num1, num2, result;
+        List<string> userInput = new List<string>();
 
         /*
         //phone orientation
@@ -43,65 +47,63 @@ namespace Calculator
         }
         */
 
+        //PRINT ON screen your equation while you add stuff
+        private void showExpression()
+        {
+            string expression = string.Join("",userInput.ToArray());
+            TextBoxExpression.Text = expression;
+        }
+        private void calculateExpression()
+        {
+            
+        }
 
-
-
-        //Button "0"
+        //number button 0-9
         private void Button_Click_0(object sender, RoutedEventArgs e)
         {
-            TextBox.Text = TextBox.Text + "0";
+            TextBox.Text += "0";
         }
-        //Button "1"
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            TextBox.Text = TextBox.Text + "1";
+            TextBox.Text += "1";
         }
-        //Button "2"
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            TextBox.Text = TextBox.Text + "2";
+            TextBox.Text += "2";
         }
-        //Button "3"
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            TextBox.Text = TextBox.Text + "3";
+            TextBox.Text += "3";
         }
-        //Button "4"
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            TextBox.Text = TextBox.Text + "4";
+            TextBox.Text += "4";
         }
-        //Button "5"
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            TextBox.Text = TextBox.Text + "5";
+            TextBox.Text +="5";
         }
-        //Button "6"
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
-            TextBox.Text = TextBox.Text + "6";
+            TextBox.Text += "6";
         }
-        //Button "7"
         private void Button_Click_7(object sender, RoutedEventArgs e)
         {
-            TextBox.Text = TextBox.Text + "7";
+            TextBox.Text +="7";
         }
-        //Button "8"
         private void Button_Click_8(object sender, RoutedEventArgs e)
         {
-            TextBox.Text = TextBox.Text + "8";
+            TextBox.Text  += "8";
         }
-        //Button "9"
         private void Button_Click_9(object sender, RoutedEventArgs e)
         {
-            TextBox.Text = TextBox.Text + "9";
+            TextBox.Text += "9";
         }
 
         //operation
         private void Clear()
         {
-            TextBox.Text = "0";
-            //TextBox.Text = string.Empty;
+             TextBox.Text = string.Empty;
         }
 
         //Button "*"
@@ -111,6 +113,11 @@ namespace Calculator
             {
                 num1 = double.Parse(TextBox.Text);
                 operation = "*";
+                string var = ""+ num1;
+                userInput.Add(var); //add num1 in list
+                userInput.Add(operation); // add * in list
+                showExpression();
+                calculateExpression();
                 Clear();
             }
         }
@@ -121,6 +128,11 @@ namespace Calculator
             {
                 num1 = double.Parse(TextBox.Text);
                 operation = "/";
+                string var = "" + num1;
+                userInput.Add(var);
+                userInput.Add(operation);
+                showExpression();
+                calculateExpression();             
                 Clear();
             }
         }
@@ -131,6 +143,11 @@ namespace Calculator
             {
                 num1 = double.Parse(TextBox.Text);
                 operation = "-";
+                string var = "" + num1;
+                userInput.Add(var);
+                userInput.Add(operation);
+                showExpression();
+                calculateExpression();
                 Clear();
             }
         }
@@ -141,6 +158,11 @@ namespace Calculator
             {
                 num1 = double.Parse(TextBox.Text);
                 operation = "+";
+                string var = "" + num1;
+                userInput.Add(var);
+                userInput.Add(operation);
+                showExpression();
+                calculateExpression();
                 Clear();
             }
         }
@@ -182,6 +204,12 @@ namespace Calculator
                     case "*": result = num1 * num2;
                         break;
                 }
+
+                /*num1 = double.Parse(TextBox.Text);
+                string var = "" + num1;
+                userInput.Add(var);
+                showExpression();
+                */
                 Clear();
                 TextBox.Text = TextBox.Text + result;
             }
@@ -192,6 +220,8 @@ namespace Calculator
             Clear();
             num1 = null;
             num2 = null;
+            userInput.Clear(); //delete everything from list
+            TextBoxExpression.Text = string.Empty;
         }
         //Button "DEL"
         private void Button_Click_Del(object sender, RoutedEventArgs e)
