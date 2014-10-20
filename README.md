@@ -5,7 +5,7 @@ Calculator
 
 
   I have created this app to learn how to use the window phone 8 sdk. 
-  This app has a main page which permit the use to chose which type of calculator he want to use. 
+  This app has a main page which permit the user to choose which type of calculator he want to use. 
   
     1- Standard: + - / *
     
